@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+  font-weight: bold;
+  background: #f3dc17;
+  color: #4c4b4e;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+}
+
+#area {
+  position: relative;
+  height: 50vh;
+  width: 450px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border: 2px solid #4c4b4e;
+}
+
+#area::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #f3dc17;
+}
+
+#area::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #f3dc17;
+}
+
+.cell {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.table {
+    display: flex;
+}
+
+th {
+    padding: 5px 10px;
+    border: 2px solid #4c4b4e;
+}
+
+td {
+    padding: 5px 10px;
+    border: 2px solid #4c4b4e;
+}
+
+.btn-reset {
+    width: 100%;
+    padding: 8px 20px;
+    font-size: 20px;
+    background-color: #4c4b4e;
+    color: #fff;
+    border: none;
+
+    cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 9;
+}
+
+.modal-window {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-content: center;
+  place-items: center;
+  background-color: #e6d53f;
+  z-index: 10;
+}
+
+.btn-close {
+  padding: 5px 15px;
+  font-size: 20px;
+  background-color: #4c4b4e;
+  color: #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.winner {
+  margin-bottom: 30px;
+  font-size: 30px;
+  width: min-content;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
+
+.cell:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
